@@ -19,4 +19,8 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'org.apache.commons:commons-lang3:3.5'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.natpryce:hamkrest:1.2.3.0'
 }
