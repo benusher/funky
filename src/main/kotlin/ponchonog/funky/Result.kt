@@ -11,6 +11,27 @@ sealed class Result<out T> : Value() {
     class Success<out T>(val value: T) : Result<T>()
 }
 
+fun <T> tryCatchNonFatal(f: () -> T): Result<T> =
+    try {
+        Result.Success(f())
+    } catch (throwable: Throwable) {
+        if (throwable.isNonFatal())
+            Result.Failure(object : ErrorCode {})
+        else
+            throw throwable
+    }
+
+private fun Throwable.isNonFatal() =
+    when (this) {
+    // StackOverflowError ok even though it is a VirtualMachineError
+        is StackOverflowError                                                            -> true
+
+    // VirtualMachineError includes OutOfMemoryError and other fatal errors
+        is VirtualMachineError, is ThreadDeath, is InterruptedException, is LinkageError -> false
+
+        else                                                                             -> true
+    }
+
 interface ErrorCode
 
 open class Value {
