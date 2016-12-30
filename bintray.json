@@ -11,7 +11,7 @@
 
   "files":
   [
-    {"includePattern": "build/libs/.*"}
+    {"includePattern": "$TRAVIS_BUILD_DIR/build/libs/.*"}
   ],
   "publish": true
 }
