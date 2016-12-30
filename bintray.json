@@ -1,0 +1,17 @@
+{
+  "package": {
+    "name": "funky",
+    "repo": "maven",
+    "subject": "benusher"
+  },
+
+  "version": {
+    "name": "0.1"
+  },
+
+  "files":
+  [
+    {"includePattern": "build/libs/.*"}
+  ],
+  "publish": true
+}

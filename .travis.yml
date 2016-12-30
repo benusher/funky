@@ -1,1 +1,8 @@
 language: java
+deploy:
+  provider: bintray
+  file: bintray.json
+  user: benusher
+  key:
+    secure: g2w2XWrtgj1SIPpj0fNTWCejfe5ylsCvj7VqagQy+aVvtgmo5YGnxTeqDvJuM2/6gUmby8f3aCSkBEvUOCKNrUoSRVej8CwDjg06UwaugW6rvF1QbSaC/2k1Ui/aepkI8pdsxLimZZgORngrt22i8MKLUw9uGr+jnpIbKkV/itH/MZwAYdX8OW/xtI4TjXlWX1WtgFARBgPTV3ERNTplpVCllkCQwwxkVxHE/wWtMZXwor14CKz/tmxFSzDvD6svSZRAxbneBK9+w6tUqRSDNdPTNw9OhRqFaRNgji51qToT19Mg3nY1+LChbwJDQW4wotYZ7W5F0yfKKhqlrKPOz5IZ2Ogo3P01IXIS0ICZ+KacUN8laR4CdCrMoQ3SM4m+uHBfHMHxaAGHpbZuk1fp/gm6+Y3Yp+yplkIfnA2erSfPwG0JcALdFiP1t+8MRi7iepKkNwUiJY+m2HPAPBPlWg/vTPv5p0z7QMx2rMopQB+rnRxHQdTjXdBuAAcFgpef9RkXpcnod85ywxy6GVQsWKVFlxjSbG94JrrMgmgQgX5aF6teJOVhvfkd3nX7Wc/WmXOXdPQQ8jcDqXtRh3B9h2S84uSJUtVeSE5ZTJAs+pHoxvfdMxCDegX320UPa7Ia0QvHt46Pxk9swkUmqOMdkO+xmYFw+MhGSJwOzRfLeTM=
+  dry-run: 'true'
